@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link href="./login.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Noto+Serif+JP&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div id="container">
+        <div class="left_container">
+            <div class="text">
+                <h1>IDS Luxury Whatches</h1>
+                <p>You go to stop place for high quality wrist accesories & devices!</p>
+            </div>
+        </div>
+
+        <div class="right_container">
+            <div>
+                <img src="./photo/images.png" width="40px">
+            </div>
+            <div>
+                <h1>Sign up below!</h1>
+            </div>
+            <form>
+                <div class="form">
+                    <div class="left">
+                        <label for="firstName">First Name</label>
+                        <input type="text" id="firstName" name="value" placeholder="Value">
+                        <br />
+                        <label for="email">Email<sup class="star">*</sup></label>
+                        <input type="email" id="email" name="email" required>
+                        <br />
+                        <label for="city">City</label>
+                        <input type="text" id="city" name="city">
+                    </div>
+
+                    <div class="right">
+                        <label for="lastName">Last Name</label>
+                        <input type="text" id="lastName" name="value" placeholder="Value">
+                        <br />
+                        <label for="password">Password<sup class="star">*</sup></label>
+                        <input type="password" id="password" name="password" required>
+                        <br />
+                        <label for="country">Country</label>
+                        <input type="text" id="country" name="country">
+                    </div>
+                </div>
+                <div class="button">
+                    <button id=button-submit type="submit">SIGN UP</button>
+                </div>
+
+            </form>
+        </div>
+
+    </div>
+    <script src="./login.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link href="./css/reset.css" rel="stylesheet" />
+    <link href="./css/all.css" rel="stylesheet" />
+    <link href="./index.css" rel="stylesheet" />
+    <link href="./button_contact.css" rel="stylesheet" />
+    <link href="./watches.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Noto+Serif+JP&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="page-container">
+        <!-- .................................................................................................................    -->
+        <header class="header">
+            <div id="header-top">
+                <div id="header-top-left"><i class="fas fa-clock">&nbsp;WEBSITE LOGO</i></div>
+                <div id="header-top-right">
+                    <a href="#"><i class="fas fa-shopping-cart" id="cart-js">&nbsp;Your Cart</i><span id="number_on_cart"></span>
+                        <div id="bulina_cart" style="display: none;"></div>
+                    </a>
+                    <div id="cart_container" class="shoping_cart" style="display:none;">
+                        <div class="title_cart">Shopping cart</div>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th colspan="2">ITEM</th>
+                                    <th>PRICE</th>
+                                    <th colspan="2">QUANTITY</th>
+                                </tr>
+                            </thead>
+                            <tbody></tbody>
+                            <tfoot>
+                                <tr>
+                                    <td id="td_total">Total: <span id="total_price">0</span></td>
+                                </tr>
+                            </tfoot>
+                        </table>
+                    </div>
+                    <a href="./login.html"> <i class="fas fa-user-circle">&nbsp;Register</i></a>
+
+                    <a href="#"><i class="fas fa-sign-in-alt" id="login-js">&nbsp;Login</i></a>
+                    <div id="window_login" style="display:none;">
+                        <form>
+                            <div id="window_login_email">
+                                <label for="login-email">Email</label>
+                                <input type="email" id="login-email" /></div>
+                            <div id="window_login_password">
+                                <label for="login-password">Password</label>
+                                <input type="password" id="login-password" /></div>
+                            <div id="window_login_button">
+                                <button type="button">Sing up</button></div>
+                        </form>
+                        <p id="p_account">Don't have an account yet?</p>
+                        <br>
+                        <a href="./login.html" id="a_account">Create an account</a>
+                    </div>
+
+                </div>
+            </div>
+
+            <div id="header-bottom">
+                <div id="header-bottom-middle">
+                    <ul id="header-bottom-ul">
+                        <li class="header-bottom-li"><a href="index.html"><i class="fas fa-home"
+                                    id="home">&nbsp;Home</i></a></li>
+                        <li class="header-bottom-li"><a href="watches.html" id="men_watches">Men's watches</a></li>
+                        <li class="header-bottom-li"><a href="watches.html" id="women_watches">Women's watches</a>
+                        </li>
+                        <li class="header-bottom-li"><a href="watches.html" id="kids_watches">Kids watches</a></li>
+                        <li class="header-bottom-li"><a href="watches.html" id="smartwatches">SmartWatches</a>
+                        </li>
+                        <li class="header-bottom-li"><a href="watches.html" id="watch_belts">Watch belts</a></li>
+                        <li class="header-bottom-li"><a href="./button_contact.html"><i class="fas fa-address-book"
+                                    id="contact-us-js">Contact us</i></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+        <!-- .................................................................................................................    -->
+        <div id="container_contact">
+
+            <div id="container_about_us">
+                <h2>ABOUT US</h2>
+                <p>JW Marriott Hotel, Grand Offices 90 Calea 13 Septembrie, 7th Floor, 7.05 District 5, Bucharest,
+                    Romania</p>
+            </div>
+
+            <div id="container_call">
+                <h2>CALL US</h2>
+                <a href="040 754852192">+40 754852192</a>
+                <p>Our hours of telephone support are Monday-Friday. 9am- 5.30pm EST. FAX: 646 513 2976</p>
+            </div>
+
+            <div id="container_email">
+                <h2>EMAIL US</h2>
+                <a href="mailto:support@wpdiamonds.com">support@wpdiamonds.com</a>
+                <p>Please email the client team. We endeavor to answer emails promptly.</p>
+            </div>
+        </div>
+        <div id="container_channels">
+            <ul>
+                <li class="channels_li"><a href="http://www.instagram.com/rolex" target="_blank"><i
+                            class="fab fa-instagram">&nbsp;Instagram</i></a></li>
+                <li class="channels_li"><a href="http://www.facebook.com/rolex" target="_blank"><i
+                            class="fab fa-facebook">&nbsp;Facebook</i></a></li>
+                <li class="channels_li"><a href="https://twitter.com/rolex" target="_blank"><i
+                            class="fab fa-twitter">&nbsp;Twitter</i></a></li>
+                <li class="channels_li"><a href="http://www.youtube.com/rolex" target="_blank"><i
+                            class="fab fa-youtube">&nbsp;YouTobe</i></a></li>
+                <li class="channels_li"><a href="https://linkedin.com/company/rolex" target="_blank"><i
+                            class="fab fa-linkedin-in">&nbsp;LinkedIn</i></a></li>
+            </ul>
+        </div>
+    </div>
+
+    <script src="./butonul_login.js"></script>
+    <script src="./your_cart.js"></script>
+
+</body>
+
+</html>

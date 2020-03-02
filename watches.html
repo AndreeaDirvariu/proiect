@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link href="./css/reset.css" rel="stylesheet" />
+    <link href="./css/all.css" rel="stylesheet" />
+    <link href="./index.css" rel="stylesheet" />
+    <link href="./button_contact.css" rel="stylesheet">
+    <link href="./watches.css" rel="stylesheet" />
+</head>
+
+<body>
+    <div class="page-container">
+        <!-- ...........................................................................................................    -->
+        <header class="header">
+            <div id="header-top">
+                <div id="header-top-left"><i class="fas fa-clock">&nbsp;WEBSITE LOGO</i></div>
+                <div id="header-top-right">
+                    <a href="#"><i class="fas fa-shopping-cart" id="cart-js">&nbsp;Your Cart</i><span
+                            id="number_on_cart"></span>
+                        <div id="bulina_cart" style="display: none;"></div>
+                    </a>
+                    <!-- ...executie cart buton -->
+
+                    <div id="cart_container" class="shoping_cart" style="display:none;">
+                        <div class="title_cart">Shopping cart</div>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th colspan="2">ITEM</th>
+                                    <th>PRICE</th>
+                                    <th colspan="2">QUANTITY</th>
+                                </tr>
+                            </thead>
+                            <tbody></tbody>
+                            <tfoot>
+                                <tr>
+                                    <td><button id="buy" style="display: none;">Check out</button></td>
+                                    <td id="td_total" colspan="5">Total: <span id="total_price">0</span>
+                                        <span>$</span>
+                                    </td>
+                                </tr>
+                            </tfoot>
+                        </table>
+                    </div>
+
+                    <a href="./login.html"> <i class="fas fa-user-circle">&nbsp;Register</i></a>
+
+                    <a href="#"><i class="fas fa-sign-in-alt" id="login-js">&nbsp;Login</i></a>
+                    <div id="window_login" style="display:none;">
+                        <form>
+                            <div id="window_login_email">
+                                <label for="login-email">Email<sup class="star">*</sup></label>
+                                <input type="email" id="login-email" required /></div>
+                            <div id="window_login_password">
+                                <label for="login-password">Password<sup class="star">*</sup></label>
+                                <input type="password" id="login-password" required /></div>
+                            <div id="window_login_button">
+                                <button type="button">Sing up</button></div>
+                        </form>
+                        <p id="p_account">Don't have an account yet?</p>
+                        <br>
+                        <a href="./login.html" id="a_account">Create an account</a>
+                    </div>
+
+                </div>
+            </div>
+            <!-- ........................................................................................................... -->
+            <div id="header-bottom">
+                <div id="header-bottom-middle">
+                    <ul id="header-bottom-ul">
+                        <li class="header-bottom-li"><a href="index.html"><i class="fas fa-home"
+                                    id="home">&nbsp;Home</i></a></li>
+                        <li class="header-bottom-li"><a href="#" id="men_watches">Men's watches</a></li>
+                        <li class="header-bottom-li"><a href="#" id="women_watches">Women's watches</a></li>
+                        <li class="header-bottom-li"><a href="#" id="kids_watches">Kids watches</a></li>
+                        <li class="header-bottom-li"><a href="#" id="smartwatches">SmartWatches</a></li>
+                        <li class="header-bottom-li"><a href="#" id="watch_belts">Watch belt</a></li>
+                        <li class="header-bottom-li"><a href="./button_contact.html"><i class="fas fa-address-book"
+                                    id="contact-us-js">Contact us</i></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+        <!-- .................................................................................................................    -->
+        <div class="search-container">
+            <input id="text-find" type="text" placeholder="Search for watch brand name or model...">
+            <input id="submit-find" type="submit" value="SEARCH">
+        </div>
+        <!-- .................................................................................................................    -->
+        <div class="bottom-container">
+
+            <div class="filter-container">
+                <div id="filter-container-h3">
+                    <h3 id="h3-filter">FILTER RESULTS</h3>
+                </div>
+
+                <!-- .................................................................................................................    -->
+                <div id="filter-container-brand">
+                    <h3 id="h3-brand">BRAND</h3>
+                    <ul id="brand" class="list-brand">
+                        <li class="list-brand"><input id="pulsar" class="checkbox-brand" type="checkbox"
+                                value="pulsar"><label for="pulsal">Pulsar</label></li>
+                        <li class="list-brand"><input class="checkbox-brand" type="checkbox"
+                                value="rolex"><label>Rolex</label></li>
+                        <li class="list-brand"><input class="checkbox-brand" type="checkbox"
+                                value="fossil"><label>Fossil</label></li>
+                        <li class="list-brand"><input class="checkbox-brand" type="checkbox"
+                                value="seiko"><label>Seiko</label></li>
+                        <li class="list-brand"><input class="checkbox-brand" type="checkbox"
+                                value="sekonda"><label>Sekonda</label></li>
+                    </ul>
+                </div>
+            </div>
+            <!-- .................................................................................................................    -->
+
+            <div id="main-container" class="main_container">
+
+                <div id="sort_results">
+                    <div class="div-sort">
+                        <label class="margin-bottom-5">Sort by</label>
+                        <select id="sort">
+                            <option value="asc">Price Low-High</option>
+                            <option value="desc" selected>Price High-Low</option>
+                            <option value="alfab">A - Z</option>
+                        </select>
+                    </div>
+                    <div class="div-result">
+                        <label class="margin-bottom-5">Result per page</label>
+                        <select id="result">
+                            <option value="5">5</option>
+                            <option value="10">10</option>
+                            <option value="999999999" selected>All</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="product-container"></div>
+            </div>
+        </div>
+
+        <script src="./butonul_login.js"></script>
+        <script src="./search.js"></script>
+        <script src="./watches.js"></script>
+        <script src="./your_cart.js"></script>
+
+</body>
+
+</html>

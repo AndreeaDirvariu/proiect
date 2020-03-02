@@ -1,0 +1,66 @@
+#container_contact{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding-top: 50px;
+}
+#container_about_us{
+    width: 400px;
+    height: 250px;
+    text-align: center;
+    font-family: 'Noto Serif JP', serif;
+    font-size: large;
+    padding: 20px;
+    margin: 20px;  
+}
+#container_call{
+    width: 400px;
+    height: 250px;
+    text-align: center;
+    font-family: 'Noto Serif JP', serif;
+    font-size: large;
+    padding: 20px;
+    margin: 20px;
+}
+#container_email{
+    width: 400px;
+    height: 250px;
+    text-align: center;
+    font-family: 'Noto Serif JP', serif;
+    font-size: large;
+    padding: 20px;
+    margin: 20px;
+}
+#container_channels{
+    width: 1200px;
+    height: 20px;
+    text-align: center;
+    font-family: 'Noto Serif JP', serif;
+    font-size: large;
+    padding-top: 50px;
+    margin: 0 auto;
+}
+.channels_li{
+    display: inline;
+    text-decoration: none;
+    color: rgb(20, 20, 20);
+    padding-right: 40px;  
+}
+.channels_li a{
+    text-decoration: none;
+    color: rgb(160, 120, 10);
+}
+#container_contact a {
+    text-decoration: none;
+    color: rgb(160, 120, 10);
+}
+#container_contact h2{
+    padding-bottom: 20px;
+    color: rgb(160, 120, 10);
+}
+#container_contact p{
+    padding-top: 20px;
+    line-height: 1.6;
+    color: rgb(160, 120, 10);
+}

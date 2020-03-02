@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link href="./css/reset.css" rel="stylesheet" />
+    <link href="./css/all.css" rel="stylesheet" />
+    <link href="./index.css" rel="stylesheet" />
+    <link href="./button_contact.css" rel="stylesheet" />
+    <link href="./home_button.css" rel="stylesheet" />
+    <link href="./watches.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Noto+Serif+JP&display=swap" rel="stylesheet" />
+</head>
+
+<body>
+    <div class="page-container">
+        <!-- .................................................................................................................    -->
+        <header class="header">
+            <div id="header-top">
+                <div id="header-top-left"><i class="fas fa-clock">&nbsp;WEBSITE LOGO</i></div>
+                <div id="header-top-right">
+                    <a href="#"><i class="fas fa-shopping-cart" id="cart-js">&nbsp;Your Cart</i><span
+                            id="number_on_cart"></span>
+                        <div id="bulina_cart" style="display: none;"></div>
+                    </a>
+                    <div id="cart_container" class="shoping_cart" style="display:none;">
+                        <div class="title_cart">Shopping cart</div>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th colspan="2">ITEM</th>
+                                    <th>PRICE</th>
+                                    <th colspan="2">QUANTITY</th>
+                                </tr>
+                            </thead>
+                            <tbody></tbody>
+                            <tfoot>
+                                <tr>
+                                    <td id="td_total">Total: <span id="total_price">0</span></td>
+                                </tr>
+                            </tfoot>
+                        </table>
+                    </div>
+                    <a href="./login.html"> <i class="fas fa-user-circle">&nbsp;Register</i></a>
+
+                    <a href=""><i class="fas fa-sign-in-alt" id="login-js">&nbsp;Login</i></a>
+                    <div id="window_login" style="display:none;">
+                        <form>
+                            <div id="window_login_email">
+                                <label for="login-email">Email</label>
+                                <input type="email" id="login-email" /></div>
+                            <div id="window_login_password">
+                                <label for="login-password">Password</label>
+                                <input type="password" id="login-password" /></div>
+                            <div id="window_login_button">
+                                <button type="button">Sing up</button></div>
+                        </form>
+                        <p id="p_account">Don't have an account yet?</p>
+                        <br>
+                        <a href="./login.html" id="a_account">Create an account</a>
+                    </div>
+
+                </div>
+            </div>
+
+            <div id="header-bottom">
+                <div id="header-bottom-middle">
+                    <ul id="header-bottom-ul">
+                        <li class="header-bottom-li"><a href="./index.html"><i class="fas fa-home"
+                                    id="home">&nbsp;Home</i></a></li>
+                        <li class="header-bottom-li"><a href="watches.html" id="men_watches">Men's watches</a></li>
+                        <li class="header-bottom-li"><a href="watches.html" id="women_watches">Women's watches</a>
+                        </li>
+                        <li class="header-bottom-li"><a href="watches.html" id="kids_watches">Kids watches</a></li>
+                        <li class="header-bottom-li"><a href="watches.html" id="smartwatches">SmartWatches</a>
+                        </li>
+                        <li class="header-bottom-li"><a href="watches.html" id="watch_belts">Watch belts</a></li>
+                        <li class="header-bottom-li"><a href="./button_contact.html"><i class="fas fa-address-book"
+                                    id="contact-us-js">Contact us</i></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+        <!-- .................................................................................................................    -->
+        <div class="visual_Container">
+            <div class="visual_Item fade">
+                <img src="./photo//pulsar2.jpg" style="width:100%">
+            </div>
+            <div class="visual_Item fade">
+                <img src="./photo/rolex.jpg" style="width:100%">
+            </div>
+            <div class="visual_Item fade">
+                <img src="./photo/rotary.jpg" style="width:100%">
+            </div>
+            <div class="visual_Item fade">
+                <img src="./photo/pulsar3.jpg" style="width:100%">
+            </div>
+            <div class="visual_Item fade">
+                <img src="./photo/seiko2.jpg" style="width:100%">
+            </div>
+            <div class="visual_Item fade">
+                <img src="./photo/sekonda.jpg" style="width:100%">
+            </div>
+
+            <a class="prev" onclick="previousSlides()">&#10094;</a>
+            <a class="next" onclick="nextSlides()">&#10095;</a>
+        </div>
+        <br>
+        <div style="text-align:center">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+            <span class="dot" onclick="currentSlide(4)"></span>
+            <span class="dot" onclick="currentSlide(5)"></span>
+            <span class="dot" onclick="currentSlide(6)"></span>
+        </div>
+
+        <script src="./home_button.js"></script>
+        <script src="./your_cart.js"></script>
+        <script src="./butonul_login.js"></script>
+
+</body>
+
+</html>
