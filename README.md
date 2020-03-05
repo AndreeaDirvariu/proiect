@@ -28,9 +28,13 @@ Pagina “Home” este o pagina introductiva unde utilizatorul poate vizualiza u
 de autentificare, fiind construit  cu elemente de tip <a>;
 -	un buton de “Contact us” pe care daca va apasa va ajunge la pagina de contact.
 Folosind meniurile de mai sus utilizatorul are ca si posibilitati de navigare accesarea paginii de inregistrare sau accesarea diferitelor categorii de produse.
-Register:
+  
+##Register:
+
 Daca acceseaza pagina “Register”  utilizatorul va trebui sa completeze un formular cu <input> speciale email si password, iar dupa ce va da click pe butonul de “Sign up” toate datele din <input> vor fi trimise catre server-ul local pentru autentificare si apoi daca a completat corect campurile, serverul va da accept si in mod automat se va creea un username ce va putea fi utilizat in viitor la fiecare accesare a site-ului printr-un simplu “mouseover” pe butonul de “Login”;
-Pagina de produse:
+  
+##Pagina de produse:
+  
 Daca alege sa mearga la vizualizarea produselor utilizatorul va avea acces implicit la lista de ceasuri barbatesti, iar celelalte categorii pot fi accesate folosind link-urile din <header>.
 Dupa un click pe oricare din categoriile din <header>  utilizatorul va putea gasi o varietate de ceasuri afisate in pagina prin manipularea DOM-ului – (Document Object Model) cu ajutorul careia am reusit sa ofer posibilitatea utilizatoarului sa poata vizualiza un produs caracterizat printr-o imagine, detalii si pret. In structura HTML a produsului am folosit elemente de tip <img> pentru afisarea imaginii, un element de tip <p> pentru detalii si un element de tip <h3> pentru pret.
 Pentru achizitionarea unui produs utilizatorul are acces la un buton “Your cart”, ce reprezinta un <table> cu un <theader>, un <tbody> si un <tfooter>; unde va putea vedea in timp real numarul de produse selectate spre a fi cumparate prin accesarea butonului “Add to cart” si la un “mousehover” pe “Your cart” va putea vizualiza produsele selectate alaturi de detaliile: pret, cantitate – ce  poate fi modificata in momentul vizualizarii cosului de cumparaturi (cart) in functie de numarul de produse dorite accesand elementul <input> cu atributul “number”; pretul total reprezentand intreaga valoare a comenzii ce este calculat in mod automat in functie de cantitate si valoarea elementara a fiecarui produs. 
@@ -42,11 +46,14 @@ Pentru o vizualizare cat mai placuta a fiecarui detaliu pe langa elementele din 
 A treia tehnologie utilizata in proiect este Javascript, cu ajutorul caruia am reusit sa adaug elemente HTML noi, sa le modific pe cele deja existente si sa adaug actiuni sau evenimente asociate diferitelor tipuri de elemente HTML ca de exemplu: la un simplu mouseover deasupra unor elemente poate conduce la directionarea catre  alte pagini ale site-ului, sau la un mouse-click pe butonul de “add-to-cart” va aparea numarul de produse in cosul de cumparaturi si in acelasi timp daca utilizatorul doreste poate vizualiza toate elemente selectate. 
 Pentru crearea tuturor actiunilor de mai sus am utilizat Functii, reprezentand cea mai importanta parte a limbajului de programare ajutand programatorul sa structureze programul in mai multe “subprograme”, sa grupeze anumite secvente de cod in unitati unice in vederea reutilizarii lor astfel evitand repetarea. 
 Un exemplu: pentru ca pagina de “Sign up” sa poata avea functionalitate a fost nevoie sa utilizez limbajul de programare Javascript si anume functia Fetch cu ajutorul careia am reusit ca dupa inregistrarea utilizatorului sa obtin un Token necesar in autorizarea acestuia catre site.
-Contact:
+  
+##Contact:
+
 -	In pagina de “Contact us” poate gasi toate variantele de contact ale firmei asezate intr-o lista de linkuri: email, numar de telefon si adresa.
 
 
-Concluzii:
+##Concluzii:
+S
 Pe parcursul implementarii acestui proiect am reusit sa dobandesc experinta in structurarea paginilor HTML, stilizarea aceastora cu CSS si manipularea continutului acestora utilizand Javascript. In plus am invatat bazele conceputului de User Experience (UX) si a aplicatilor “responsive”.
 
 
