@@ -40,12 +40,9 @@ function get_search_brand() {
 
 function search_product(search_text, lista_brand, sort, limita) {
     var final_results = [];
-    console.log(search_text, lista_brand, sort, limita)
-    console.log(pagina_curenta)
     switch (pagina_curenta) {
         case "men":
             var results_name = search_name(watches_men, search_text);
-console.log(results_name)
             if (lista_brand.length == 0) { final_results = results_name }
             else {
                 for (var i = 0; i < lista_brand.length; i++) {
