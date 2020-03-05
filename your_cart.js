@@ -163,7 +163,6 @@ cart_container.addEventListener("click", function (e) {
         e.target.parentElement.parentElement.parentElement.remove();
         document.getElementById("total_price").innerHTML = calc_pret_total();
     }
-
 })
 
 // daca exista deja in cart

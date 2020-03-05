@@ -7,7 +7,7 @@ function search(e) {
     var search_brand = get_search_brand();
     var select = document.getElementById("sort");
     var result_page = document.getElementById("result");
-    cauta(search_text, search_brand, select.value, result_page.value);
+    search_product(search_text, search_brand, select.value, result_page.value);
 }
 
 var ul_checkbox = document.getElementById("brand");
@@ -18,7 +18,7 @@ function select_brand(e) {
     var search_brand = get_search_brand();
     var select = document.getElementById("sort");
     var result_page = document.getElementById("result");
-    cauta(search_text, search_brand, select.value, result_page.value);
+    search_product(search_text, search_brand, select.value, result_page.value);
 }
 
 function get_search_text() {
@@ -38,18 +38,18 @@ function get_search_brand() {
     return select_value;
 }
 
-function cauta(search_text, lista_brand, sort, limita) {
+function search_product(search_text, lista_brand, sort, limita) {
     var final_results = [];
     console.log(search_text, lista_brand, sort, limita)
     console.log(pagina_curenta)
     switch (pagina_curenta) {
         case "men":
-            var results_name = cauta_nume(watches_men, search_text);
+            var results_name = search_name(watches_men, search_text);
 console.log(results_name)
             if (lista_brand.length == 0) { final_results = results_name }
             else {
                 for (var i = 0; i < lista_brand.length; i++) {
-                    var result_brand = cauta_brand(results_name, lista_brand[i]);
+                    var result_brand = search_brands(results_name, lista_brand[i]);
 
                     for (var z = 0; z < result_brand.length; z++) {
                         final_results.push(result_brand[z])
@@ -58,12 +58,12 @@ console.log(results_name)
             }
             break;
         case "women":
-            var results_name = cauta_nume(watches_women, search_text);
+            var results_name = search_name(watches_women, search_text);
 
             if (lista_brand.length == 0) { final_results = results_name }
             else {
                 for (var i = 0; i < lista_brand.length; i++) {
-                    var result_brand = cauta_brand(results_name, lista_brand[i]);
+                    var result_brand = search_brands(results_name, lista_brand[i]);
 
                     for (var z = 0; z < result_brand.length; z++) {
                         final_results.push(result_brand[z])
@@ -72,12 +72,12 @@ console.log(results_name)
             }
             break;
         case "kids":
-            var results_name = cauta_nume(watches_kids, search_text);
+            var results_name = search_name(watches_kids, search_text);
 
             if (lista_brand.length == 0) { final_results = results_name }
             else {
                 for (var i = 0; i < lista_brand.length; i++) {
-                    var result_brand = cauta_brand(results_name, lista_brand[i]);
+                    var result_brand = search_brands(results_name, lista_brand[i]);
 
                     for (var z = 0; z < result_brand.length; z++) {
                         final_results.push(result_brand[z])
@@ -86,12 +86,12 @@ console.log(results_name)
             }
             break;
         case "smartwatches":
-            var results_name = cauta_nume(smartwatches, search_text);
+            var results_name = search_name(smartwatches, search_text);
 
             if (lista_brand.length == 0) { final_results = results_name }
             else {
                 for (var i = 0; i < lista_brand.length; i++) {
-                    var result_brand = cauta_brand(results_name, lista_brand[i]);
+                    var result_brand = search_brands(results_name, lista_brand[i]);
 
                     for (var z = 0; z < result_brand.length; z++) {
                         final_results.push(result_brand[z])
@@ -100,12 +100,12 @@ console.log(results_name)
             }
             break;
         case "belts":
-            var results_name = cauta_nume(watches_belt, search_text);
+            var results_name = search_name(watches_belt, search_text);
 
             if (lista_brand.length == 0) { final_results = results_name }
             else {
                 for (var i = 0; i < lista_brand.length; i++) {
-                    var result_brand = cauta_brand(results_name, lista_brand[i]);
+                    var result_brand = search_brands(results_name, lista_brand[i]);
 
                     for (var z = 0; z < result_brand.length; z++) {
                         final_results.push(result_brand[z])
@@ -143,7 +143,7 @@ console.log(results_name)
     myWhatches(final_results.slice(0, limita));
 }
 
-function cauta_nume(lista_watches, text) {
+function search_name(lista_watches, text) {
     if (text.length == 0) {
         return lista_watches;
     }
@@ -157,7 +157,7 @@ function cauta_nume(lista_watches, text) {
     }
     return results;
 }
-function cauta_brand(lista_watches, text) {
+function search_brands(lista_watches, text) {
     if (text.length == 0) {
         return lista_watches;
     }
@@ -177,7 +177,7 @@ function select_price(e) {
     var search_text = get_search_text();
     var search_brand = get_search_brand();
     var result_page = document.getElementById("result");
-    cauta(search_text, search_brand, this.value, result_page.value)
+    search_product(search_text, search_brand, this.value, result_page.value)
 }
 
 var result_page = document.getElementById("result");
@@ -187,5 +187,5 @@ function select_number(e) {
     var search_text = get_search_text();
     var search_brand = get_search_brand();
     var select = document.getElementById("sort");
-    cauta(search_text, search_brand, select.value, this.value)
+    search_product(search_text, search_brand, select.value, this.value)
 }

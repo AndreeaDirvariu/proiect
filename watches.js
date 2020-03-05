@@ -425,4 +425,4 @@ var search_text = get_search_text();
 var search_brand = get_search_brand();
 var select = document.getElementById("sort");
 var result_page = document.getElementById("result");
-cauta(search_text, search_brand, select.value, result_page.value);
+search_product(search_text, search_brand, select.value, result_page.value);
