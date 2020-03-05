@@ -1,6 +1,6 @@
-Documentatie proiect:
+##Documentatie proiect:
 
-“Magazin online – ceasuri”
+##“Magazin online – ceasuri”
 
 
 
@@ -13,14 +13,15 @@ Pentru a construi acest sistem am folosit urmatoarele tehnologii:
 -	 HTML5 – (Hyper Text Markup Language)
 -	 CSS3 – (Cascading Style Sheets and CSS Object Model)
 -	Javascript
-Site-ul poate fi accesat folosind orice browser web iar punctul de intrare in site este pagina de “Index” iar de aici utilizatorul are linkuri catre toate paginile site-ului dupa cum urmeaza:
+
+  Site-ul poate fi accesat folosind orice browser web iar punctul de intrare in site este pagina de “Index” iar de aici utilizatorul are linkuri catre toate paginile site-ului dupa cum urmeaza:
 -	Home;
 -	Pagina produse;
 -	Register;
 -	Login;
 -	Contact.
 
-Home:
+##Home:
 Pagina “Home” este o pagina introductiva unde utilizatorul poate vizualiza un carusel cu o lista de imagini unde la fiecare 0.6 secunde va avea loc un “transition” cu imagini reprezentative firmelor de top;
 - un header cu o lista de link-uri catre toate categoriile de ceasuri: pentru barbati “Men’s watches”, pentru femei “Women’s watches”, pentru copii “Kid’s watches”, ceasuri inteligente “SmartWatches” si curele pentru ceasuri “Belts”;
 -	un meniu de unde poate accesa sectiunea de inregistrare si formularul 
