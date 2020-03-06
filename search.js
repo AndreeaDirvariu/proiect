@@ -1,6 +1,7 @@
 var button_search = document.getElementById("submit-find");
 button_search.addEventListener("click", search);
 
+//cauta produse cand se apasa pe butonul search
 function search(e) {
     e.preventDefault();
     var search_text = get_search_text();
@@ -13,6 +14,7 @@ function search(e) {
 var ul_checkbox = document.getElementById("brand");
 ul_checkbox.addEventListener("click", select_brand);
 
+//cauta produse cand se selecteaza branduri
 function select_brand(e) {
     var search_text = get_search_text();
     var search_brand = get_search_brand();
@@ -21,12 +23,13 @@ function select_brand(e) {
     search_product(search_text, search_brand, select.value, result_page.value);
 }
 
+//citeste valoarea din inputul text
 function get_search_text() {
     var input = document.getElementById("text-find");
     var search_text = input.value;
     return search_text;
 }
-
+//imi da brendurile selectate
 function get_search_brand() {
     var select = document.getElementsByClassName("checkbox-brand");
     var select_value = [];
@@ -38,6 +41,7 @@ function get_search_brand() {
     return select_value;
 }
 
+// filtreaza dupa text, brand, sort, limita
 function search_product(search_text, lista_brand, sort, limita) {
     var final_results = [];
     switch (pagina_curenta) {
@@ -140,6 +144,7 @@ function search_product(search_text, lista_brand, sort, limita) {
     myWhatches(final_results.slice(0, limita));
 }
 
+// imi cauta numele selectat in array-urile de ceasuri
 function search_name(lista_watches, text) {
     if (text.length == 0) {
         return lista_watches;
@@ -154,6 +159,8 @@ function search_name(lista_watches, text) {
     }
     return results;
 }
+
+//in fct de butonul selectat imi cauta produsul in lista de ceasuri
 function search_brands(lista_watches, text) {
     if (text.length == 0) {
         return lista_watches;
@@ -167,6 +174,7 @@ function search_brands(lista_watches, text) {
     return results;
 }
 
+//.................
 var select = document.getElementById("sort");
 select.addEventListener("change", select_price);
 
@@ -177,6 +185,7 @@ function select_price(e) {
     search_product(search_text, search_brand, this.value, result_page.value)
 }
 
+//..................
 var result_page = document.getElementById("result");
 result_page.addEventListener("change", select_number);
 

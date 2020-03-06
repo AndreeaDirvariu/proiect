@@ -389,8 +389,8 @@ function display_watches_belt(e) {
     myWhatches(watches_belt);
 }
 
+//imi afiseaza ceasurile in pagina
 function myWhatches(watches) {
-
     var product_container = document.querySelector(".product-container");
     product_container.innerHTML = "";
     for (var i = 0; i < watches.length; i++) {

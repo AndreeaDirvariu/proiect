@@ -12,6 +12,7 @@ function loghin(e) {
         password,
     };
 
+// face autentificarea si directioneaza la index
     fetch("http://localhost:3000/api/auth/login", {
         method: "POST",
         body: JSON.stringify(body)

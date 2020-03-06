@@ -1,17 +1,20 @@
+//imi afiseaza si imi ascunde fereastra de cart
 document.querySelector("#cart-js").addEventListener("mouseover", show_hide_cart);
 
 function  show_hide_cart(e) {
     e.preventDefault();
     e.stopPropagation();
-    var select_cart_container = document.querySelector("#cart_container");
 
+    var select_cart_container = document.querySelector("#cart_container");
     if (select_cart_container.style.display === 'none') {
         select_cart_container.style.display = 'block';
+    
     } else {
         select_cart_container.style.display = 'none';
     }
 }
 
+//se asigura ca se inchide fereastra doar cand dai click in interiorul ei
 var document_button_cart = document.querySelector("body").addEventListener("click", function (e) {
     var select_cart_container = document.querySelector("#cart_container");
     if (e.target.classList.contains("title_cart")) {
@@ -46,8 +49,8 @@ var document_button_cart = document.querySelector("body").addEventListener("clic
        }
     });
 
+//afiseaza produsele
 function add_product_to_body(product) {
-
     var shoping_cart = document.getElementById("cart_container");
     var tbody = shoping_cart.getElementsByTagName("tbody")[0];
     var tr = document.createElement("tr");
@@ -102,6 +105,7 @@ function add_product_to_body(product) {
 
 }
 
+//imi verifica butonul pe care s-a dat click
 var product_container = document.querySelector(".product-container");
 product_container.addEventListener("click", select_product)
 
@@ -128,7 +132,7 @@ function select_product(e) {
         var id = e.target.getAttribute("data-product_id")
         var product = search_id(products, id);
 
-        // ..........daca produsul exista in toata lista de produse
+        // daca produsul exista in toata lista de produse
         if (product) {
             if (is_in_cart(id)) {
                 increment_cant(id);
@@ -146,6 +150,7 @@ function select_product(e) {
     }
 }
 
+//
 function search_id(lista_watches, id) {
     for (var i = 0; i < lista_watches.length; i++) {
         if (lista_watches[i].id == id) {
@@ -154,7 +159,7 @@ function search_id(lista_watches, id) {
     }
 }
 
-// .......................remove
+// remove
 
 var cart_container = document.getElementById("cart_container");
 cart_container.addEventListener("click", function (e) {
@@ -166,7 +171,6 @@ cart_container.addEventListener("click", function (e) {
 })
 
 // daca exista deja in cart
-
 function is_in_cart(product_id) {
     var select_tr = document.getElementById(product_id)
     if (select_tr) {
@@ -176,21 +180,18 @@ function is_in_cart(product_id) {
 }
 
 // incrementeaza cantitatea
-
 function increment_cant(product_id) {
     var qty_input = document.getElementById("qty_" + product_id);
     qty_input.value++;
 }
 
 // calculeaza pretul pentru un produs
-
 function calc_price(product) {
     var qty_input = document.getElementById("qty_" + product.id);
     return qty_input.value * product.price;
 }
 
 //calculeaza pretul total:
-
 function calc_pret_total() {
     var product_tr = document.getElementsByClassName("tr_product");
     var pret_total = 0;
